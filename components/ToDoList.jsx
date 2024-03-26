@@ -1,11 +1,12 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text } from 'react-native';
 
-const ToDoList = () => {
+const ToDoList = ({ tasks }) => {
   return (
     <ScrollView style={styles.task}>
-      <Text style={styles.taskText}>Task 1</Text>
-      <Text style={styles.taskText}>Task 2</Text>
+      {tasks.map((task, index) => (
+        <Text key={index} style={styles.taskText}>{task}</Text>
+      ))}
     </ScrollView>
   );
 };
