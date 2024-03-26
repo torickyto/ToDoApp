@@ -9,7 +9,11 @@ function App() {
     'Go to gym',
     'Walk dog'
   ]);
-  
+
+  const addTask = (taskText) => {
+    setTasks([...tasks, taskText]);
+  };
+
   return (
     <SafeAreaView>
       <ToDoList/>
